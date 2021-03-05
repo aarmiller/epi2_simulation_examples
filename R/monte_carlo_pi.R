@@ -54,7 +54,7 @@ random_points_2 <-tibble(num_trials=c(100,1000,10000,30000)) %>%
                       mutate(in_circle=dist<=1)))
 
 random_points_2 %>% 
-  unnest() %>% 
+  unnest(points) %>% 
   group_by(num_trials) %>% 
   summarise(pi=4*sum(in_circle)/n())
 
