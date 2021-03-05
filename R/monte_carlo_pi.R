@@ -1,4 +1,5 @@
 rm(list=ls())
+# installed.packages("tidyverse")  # Uncomment this if not installed
 library(tidyverse)
 
 #### Short Monte-Carlo simulation - estimate the value of pi ####
@@ -9,7 +10,7 @@ library(tidyverse)
 # circle where all four side touched the edge of the circle. The area 
 # of the square would then be (2r)^2 or 4r^2. 
 
-# Now suppose we randomly drapped points inside the squre we would expect
+# Now suppose we randomly dropped points inside the squre we would expect
 # roughly pi*r^2/4r^2 = pi/4 of the points to land in the circle (i.e., the
 # ratio of the two areas). Thus, if we randomly drop a number of points, 
 # and compute the proportion in the square p_square, we can find an estimate
