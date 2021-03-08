@@ -25,10 +25,10 @@ library(tidyverse)
 # Number of random points to drop
 trials <- 1000
 
-# Build a tibble with the randompoints
+# Build a tibble with the random points
 random_points <- tibble(x=runif(n = trials,-1,1),      # draw random x coordinate
-                        y=runif(n = trials,-1,1)) %>%  # draw random y coordiante
-  mutate(dist=x^2+y^2) %>%                      # comute the distence from center
+                        y=runif(n = trials,-1,1)) %>%  # draw random y coordinate
+  mutate(dist=x^2+y^2) %>%                      # compute the distance from center
   mutate(in_circle=dist<=1)                     # identify points that fall in circle
 
 # note what the trials set contains
