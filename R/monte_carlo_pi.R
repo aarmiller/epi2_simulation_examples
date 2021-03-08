@@ -44,6 +44,7 @@ pi_est <- random_points %>%
   summarise(pct_in=sum(in_circle)/n(),
             pi=pct_in*4)
 
+pi_est
 pi_est$pi
 
 # Notice how accuracy changes for different number of trials
@@ -61,7 +62,7 @@ random_points_2 %>%
 
 # plot for different number of trials
 random_points_2 %>% 
-  unnest() %>% 
+  unnest(points) %>% 
   ggplot(aes(x,y,color=in_circle)) +
   geom_point() +
   facet_wrap(~num_trials)
